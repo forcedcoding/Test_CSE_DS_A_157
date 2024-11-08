@@ -4,20 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+        }
+        .cont{
+            background-color: antiquewhite;
+            height: 130px;
+            width: 90%;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        input{
+            width: 99%;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid black;
+            padding: 3px;
+            border: none;
+            box-shadow: 1px 1px 1px 1px;
+        }
+        .user{
+            margin: 10px;
+        }
+        .pass{
+            margin: 10px
+        }
+        button{
+            width: 10%;
+            height: 30px;
+            background-color: rgb(5, 179, 5);
+            color: white;
+            border-radius: 15px;
+            border: none;
+            /* margin-left: 10px; */
+        }
+        .butt{
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="main">
         <div class="cont">
             <div class="user">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" id="u" value="">
             </div>
             <div class="pass">
-                <input type="password" name="" id="" placeholder="Password">
+                <input type="password" name="" id="p" placeholder="Password" value="">
             </div>
-            <div class="butt">
+            <div class="butt" onclick="check()">
                 <button>LogIn</button>
             </div>
         </div>
     </div>
+    <script>
+        function check(){
+            const a = document.getElementById("u").value;
+            const b = document.getElementById("p").value;
+            console.log(a);
+            console.log(b);
+            if( a==="a" && b==="b"){
+                alert("Login Successful");
+            }
+            else{
+                alert("Wrong Details");
+            }
+        }
+    </script>
 </body>
 </html>
